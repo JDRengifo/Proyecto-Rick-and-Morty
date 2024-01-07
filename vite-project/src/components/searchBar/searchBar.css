@@ -1,0 +1,15 @@
+.container {
+    padding: 20px;
+    background-color: aqua;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    
+}
+  
+ .botonAgregar {
+    border: 20px;
+    font-size: 54px;
+    padding: 10px 20px;
+}
