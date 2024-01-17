@@ -1,11 +1,31 @@
+
+import { useState } from 'react';
 import './searchBar.css'
 
 
-export default function SearchBar(props) {
+const SearchBar =(props)=> {
+
+   const [id, setId] = useState('')
+
+   const handleClick = ()=>{
+      props.onSearch(id)
+   }
+
+const handleChange = (event)=> {
+   setId(event.target.value)
+}
+
    return (
-      <div className='container'>
-         <input id='myInput' className='botonAgregar' type='search' placeholder="id.."/>
-         <button className='botonAgregar' onClick={props.onSearch}>Agregar</button>
-      </div>
+      <>
+         <input 
+            onChange={handleChange}
+            value={id} 
+            id='myInput' 
+            className='imput' 
+            type='search' placeholder="id.."
+         />
+         <button className='botonAgregar' onClick={handleClick}>AGREGAR</button>
+      </>
    );
 }
+export default SearchBar;

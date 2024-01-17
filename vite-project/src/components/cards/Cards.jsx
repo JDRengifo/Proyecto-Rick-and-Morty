@@ -1,20 +1,21 @@
 import Card from "../card/Card"
 import './cards.css'
 
-export default function Cards(props) {
-
-   return(<div className="contenedor">
-         {props.characters.map((item) =>{
-           return(
-            <Card 
+export default function Cards({characters, onClose}) {
+      
+   return(<div id="cards2" className="contenedor">
+         {characters.map((item) =>{
+            return(
+               <Card 
+               key = {item.id}
                 id = {item.id}
-                onClose = {item.onClose}
                 name = {item.name}
                 status = {item.status}
                 species = {item.species}
                 gender = {item.gender}
                 origen = {item.name.origen}
                 image ={item.image}
+                onClose={()=>onClose(item.id)}
                 />
            )
           })}

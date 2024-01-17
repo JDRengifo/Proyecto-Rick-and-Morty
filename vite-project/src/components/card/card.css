@@ -5,23 +5,26 @@
     width: 400px;
     height: 600px;
     border-radius: 10%;
-    margin: 10px;
-    border: 30px solid rgb(240, 240, 240)
-  }
+    margin: 20px;
+    border: 30px solid rgb(211, 205, 205);
+    background-size: cover;
+    background-position: center;
+ }
   
 
 .numeroDeCarta {
     display: flex;
-    position: absolute;
+    position: relative;
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: cursive;
     font-size: 9mm;
-    color:  black;
+    color:  chartreuse;
   }
 
   img {
+    position: absolute;
     border-radius: 4%;
     width: 100%;
     height: 100%;
@@ -31,8 +34,8 @@
   }
 
   .nombre {
-    position: absolute;
-    top: 90%;
+    position: relative;
+    top: 99%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: cursive;
@@ -42,12 +45,12 @@
  
   .botonEliminar {
     position: absolute;
-    top: 6%;
-    left: 95%;
+    top: 1%;
+    left: 99%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0);
-    color: black;
-    font-size: 64px;
+    color: firebrick;
+    font-size: 33px;
     padding: 10px 20px;
   }
  

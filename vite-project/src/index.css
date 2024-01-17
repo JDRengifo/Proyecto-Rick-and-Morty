@@ -23,11 +23,15 @@ a:hover {
 }
 
 body {
+  
+  background-image: url('https://th.bing.com/th/id/OIP.IvvkYQ3JI9d2DLIIqe7X4QHaEK?w=293&h=180&c=7&r=0&o=5&pid=1.7');
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
- 
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  
 }
 
 h1 {
