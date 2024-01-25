@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import axios from 'axios'
 import { useParams } from "react-router-dom";
-// import { URL } from "../../hooks/useApp";
+import './detail.css'
 
 function Detail(){
   const {id} = useParams();
@@ -21,21 +21,21 @@ function Detail(){
   );
   return setCharacter({});
 }, [id]);
-                    // return(
-                    //     <h1>Soy DETALI Bienvenidos</h1>
-                    // )
                     
 return(
-    <div className="detail">
-     <h1>Esta es la vista de la tarjeta {id}</h1>
-      {/* <h2>{data.id}</h2>
-      <h2 >{data.name}</h2>
-      <h2 > {data.status}</h2>
-      <h2>{data.species}</h2>
-     <h2>{data.gender}</h2>
-     <h2 > {data.origen}</h2>
-     <img src={data.image} alt=''  margin = '10px'/> */}
+<div className="detailDiv">
+  <div className="detailDatos">
+  <h3>Datos de la tarjeta nro. {id}</h3>
+       <h3 className="name">{character.name}</h3>
+       <h3> {character.status}</h3>
+       <h3>{character.species}</h3>
+       <h3>{character.gender}</h3>
+       <h3> {character.origen}</h3>
    </div>
+   <div className="detailImagen">
+     <img src={character.image} alt=''  margin = '10px'/>
+   </div>
+</div>
  )
 };
 export default Detail
