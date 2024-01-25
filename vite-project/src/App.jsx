@@ -30,9 +30,9 @@ function App() {
   const EMAIL = 'josedariorf@gmail.com';
   const PASSWORD = 'jose1234';
 
-  // useEffect(()=>{
-  //   !access && navigate('/');
-  // }, [access]);
+  useEffect(()=>{
+    !access && navigate('/');
+  }, [access]);
 
   function login(userData){
     if(userData.password === PASSWORD && userData.email === EMAIL){

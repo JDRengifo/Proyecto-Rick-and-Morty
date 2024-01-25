@@ -5,7 +5,7 @@ import { addFav, removeFav } from '../../Redux/action';
 import './Card.css'
 
 function Card(props) {
-
+   const {name, status, gender, species, origin, image, addFav, removeFav} = props;
    const [isFav, setIsFav] = useState(false);
 
    const handleFavorite = ()=>{
@@ -15,13 +15,13 @@ function Card(props) {
       } else {
          setIsFav(true);
          addFav({
-            id: props.id,
-            name: props.name,
-            status: props.status,
-            gender: props.gender,
-            species: props.species,
-            origen: props.origen,
-            image: props.image
+            id,
+            name,
+            status,
+            gender,
+            species,
+            origin,
+            image
          })
       }
    }
