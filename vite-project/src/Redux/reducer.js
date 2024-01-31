@@ -1,17 +1,22 @@
-import { ADD_FAV, REMOVE_FAV } from "./actions-types";
+// IMPORTO LAS ACCIONES
+
+import { ADD_FAVORITE, REMOVE_FAVORITE } from "./action";
+
+
 
 //Acá va el estado inicial del store
 const initialState = {
     myFavorites: [],
-}
+};
 
 const reducer = (state = initialState, action)=>{
+    const { type, payload } = action;
 // const reducer = (state = initialState, {type, payload})
-    switch (action.type) {
-        case ADD_FAV:
+    switch (type) {
+        case ADD_FAVORITE:
             return {
                 ...state,
-                myFavorites: [...state.myFavorites, action.payload]
+                myFavorites: [...state.myFavorites, payload]
                // myFavorites: [...state.myFavorites, payload] <--esto va con la linea 9
 
                //tambien se podria con concat
@@ -20,8 +25,8 @@ const reducer = (state = initialState, action)=>{
                // O tambien con el push
                //myFavorites: state.myFavorites.push(payload)
             }
-            case REMOVE_FAV:
-                const filtrados = state.myFavorites.filter((item)=>item.id !== payload);
+            case REMOVE_FAVORITE:
+                const filtrados = state.myFavorites.filter((char)=>char.id !== payload);
                 return {
                     // spread operator
                     ...state,
@@ -35,7 +40,7 @@ const reducer = (state = initialState, action)=>{
     //               }
 
             default:
-               return state;
+               return {...state};
     }
 }
 

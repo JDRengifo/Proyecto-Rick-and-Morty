@@ -8,7 +8,7 @@ import Home from './components/home/Home.jsx';
 import About from './components/about/About.jsx';
 import Detail from './components/detail/Detail.jsx';
 import Form from './components/form/Form.jsx';
-import Favorites from './components/faorites/Favorites.jsx';
+import Favorites from './components/favorites/Favorites.jsx';
 
 
   const Titulo = styled.h1`

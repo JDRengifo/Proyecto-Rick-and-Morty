@@ -1,10 +1,14 @@
-import {ADD_FAV, REMOVE_FAV} from "./actions-types";
+// Acá va Estado Global Inicial
+// y Logica de cada ACTION
+
+export const ADD_FAVORITE = 'ADD_FAVORITE';
+export const REMOVE_FAVORITE = 'REMOVE_FAVORITE';
 
 
-export const addFav = (payload) => {
+export const addFav = (char) => {
     return {
-        type: ADD_FAV,
-        payload: payload
+        type: ADD_FAVORITE,
+        payload: char
       //payload    <-- por ES6 si la propiedad es igual al valor se puede solo colocar 
                     //la propiedad y el valor se sobreentiende que es el mismo
     };
@@ -12,7 +16,7 @@ export const addFav = (payload) => {
 
 export const removeFav = (id) => {
     return {
-        type: REMOVE_FAV,
+        type: REMOVE_FAVORITE,
         payload: id
     };
 };

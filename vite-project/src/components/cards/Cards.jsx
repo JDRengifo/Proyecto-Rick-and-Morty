@@ -13,7 +13,7 @@ export default function Cards({characters, onClose}) {
                 status = {item.status}
                 species = {item.species}
                 gender = {item.gender}
-                origen = {item.name.origen}
+                origin = {item.name.origen}
                 image ={item.image}
                 onClose={()=>onClose(item.id)}
                 />
