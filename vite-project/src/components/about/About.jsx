@@ -3,6 +3,7 @@ import React from "react";
 function About(){
     return(
         <div>
+            <img src="./foto_de_frente.png" alt="foto de frente" />
             <h1>SOY HENRY</h1>
             <br />
             <h2>"PROYECTO RICK and MORTY"</h2>

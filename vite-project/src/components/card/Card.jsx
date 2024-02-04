@@ -7,7 +7,7 @@ import './Card.css'
 
 function Card(props) {
    const {id, name, status, gender, species, origin, image} = props;
-
+// console.log(props)
    const dispatch = useDispatch();
    const myFavorites = useSelector(state => state.myFavorites)
 

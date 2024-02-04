@@ -11,11 +11,11 @@ import Form from './components/form/Form.jsx';
 import Favorites from './components/favorites/Favorites.jsx';
 
 
-  const Titulo = styled.h1`
-    font-size: 5em;
-    color: blue;
-    text-align: center;
-  `
+  // const Titulo = styled.h1`
+  //   font-size: 5em;
+  //   color: blue;
+  //   text-align: center;
+  // `
  export const URL = 'https://rickandmortyapi.com/api/character/'
 
 function App() {
@@ -60,7 +60,6 @@ function App() {
       <div className='App' >
         {location.pathname !== '/' ? <Nav onSearch={onSearch}/> : undefined}
         
-        <Titulo>COLECCION RICK AND MORTY</Titulo>
         <Routes>
           <Route path='/' element={<Form login={login}/>}/>
           <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}/>
